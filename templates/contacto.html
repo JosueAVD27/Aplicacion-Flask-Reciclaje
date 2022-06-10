@@ -31,9 +31,9 @@
                             <div class="row">
                                 <h1 class="mb-5">TE AYUDAMOS</h1>
                                 <div class="justify-content-center">
-                                    <h2>Contacta con nosotros para cualquier tipo de trabajo relacionado con los
-                                        residuos de tu empresa.</h2>
-                                    <h2>Te asesoramos y damos solución a tus necesidades.</h2>
+                                    <h3>Contacta con nosotros para cualquier tipo de trabajo relacionado con los
+                                        residuos de tu empresa.</h3>
+                                    <h3>Te asesoramos y damos solución a tus necesidades.</h3>
                                     <p>Santo Domingo de los Tsáchilas - Ecuador</p>
                                     <p> Tel. +593 99 87 357 175</p>
                                     <p> E-mail.
@@ -43,58 +43,55 @@
                                         </ul>
 
                                     </p>
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-lg-5">
-                                                <div class="form-row">
-                                                    <h1>&nbsp;</h1>
-                                                    <label for="exampleInputname1">
-                                                        <h2>Ingrese nombre</h2>
-                                                    </label>
-                                                    <input type="text" class="form-control" placeholder="Nombre"
-                                                        name="nombre">
-                                                    <h1>&nbsp;</h1>
-                                                    <label for="exampleInputlastname1">
-                                                        <h2>Ingrese apellido</h2>
-                                                    </label>
-                                                    <input type="text" class="form-control" placeholder="Apellido"
-                                                        name="apellido">
-                                                    <h1>&nbsp;</h1>
-                                                    <label for="exampleInputEmail1">
-                                                        <h2>Ingrese correo electrónico</h2>
-                                                    </label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                                        aria-describedby="emailHelp" placeholder="Ingrese email"
-                                                        name="correoelectronico">
-                                                    <h1>&nbsp;</h1>
-                                                    <label for="exampleInputname1">
-                                                        <h2>Ingrese asunto</h2>
-                                                    </label>
-                                                    <input type="text" class="form-control" placeholder="Asunto"
-                                                        name="asunto">
-                                                    <h1>&nbsp;</h1>
-                                                    <label for="exampleFormmensaje">
-                                                        <h2>Mensaje</h2>
-                                                    </label>
-                                                    <textarea class="form-control" id="exampleFormControlmensaje"
-                                                        rows="3"></textarea>
-                                                </div>
+                                    <br>
+                                    <br>
+                                    <form method="post" action="{{url_for('enviarContacto')}}">
+                                        <div align="center" class="form-group">
+                                            <!--FORMULARIO DE INGRESO DE DATOS-->
+                                            <div class="form-group col-md-6">
+                                                <!-- NOMBRES -->
+                                                <label><b>NOMBRES</b></label>
+                                                <input type="text" class="form-control" placeholder="Ingrese sus nombres" name="ingreso_nombre">
                                             </div>
-                                            <div class="col-lg">
-                                                <h1>&nbsp;</h1>
-                                                <h1>&nbsp;</h1>
-                                                <h1>&nbsp;</h1>
-                                                <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4744.597022038022!2d-79.31153442728099!3d-0.4130818153750838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d53237044f39bb%3A0x24ed753bfe34c98b!2sUniversidad%20de%20las%20Fuerzas%20Armadas%20-%20ESPE%20-%20Santo%20Domingo!5e0!3m2!1ses!2sec!4v1654817615687!5m2!1ses!2sec"
-                                                    width="600" height="450" style="border:0;" allowfullscreen=""
-                                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            <div class="form-group col-md-6">
+                                                <br>
+                                                <!-- APELLIDOS -->
+                                                <label><b>APELLIDOS</b></label>
+                                                <input type="text" class="form-control" placeholder="Ingrese sus apellidos" name="ingreso_apellido">
                                             </div>
+                                            <div class="form-group col-md-6">
+                                                <br>
+                                                <!-- CORREO ELECTRONICO -->
+                                                <label><b>CORREO ELECTRONICO</b></label>
+                                                <input type="email" class="form-control" placeholder="Ingrese su correo electronico" name="ingreso_correo">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <br>
+                                                <!-- TELEFONO -->
+                                                <label><b>NUMERO DE TELEFONO</b></label>
+                                                <input type="number" class="form-control" placeholder="Ingrese su numero de telefono" name="ingreso_telefono">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <br>
+                                                <!-- MOTIVO -->
+                                                <label><b>MOTIVACIÓN</b></label>
+                                                <input type="text" class="form-control" placeholder="Ingrese su motivación al contactarnos" name="ingreso_motivacion">
+                                            </div>                             
                                         </div>
+                                        <!--BOTON PARA ENVIAR DATOS A LA TABLA-->
+                                        <br>
+                                        <button type="submit" class="btn btn-primary">AGENDAR TAREA</button>
                                     </form>
                                 </div>
                             </div>
-                            <h1>&nbsp;</h1>
-                            <button type="button" class="btn btn-primary">Enviar</button>
+                        </div>
+
+                        <div class="col-lg">
+                            <br>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4744.597022038022!2d-79.31153442728099!3d-0.4130818153750838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d53237044f39bb%3A0x24ed753bfe34c98b!2sUniversidad%20de%20las%20Fuerzas%20Armadas%20-%20ESPE%20-%20Santo%20Domingo!5e0!3m2!1ses!2sec!4v1654817615687!5m2!1ses!2sec"
+                                width="900" height="500" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <!-- Signup form-->
                         <!-- * * * * * * * * * * * * * * *-->
@@ -141,41 +138,6 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
-<style>
-    .navigation ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .navigation ul li {
-        display: inline-block;
-        text-decoration: none;
-    }
-
-    .navigation ul li a {
-        display: block;
-        padding: 0.5rem 1rem;
-        transition: all 0.4s linear;
-        border-radius: 5px;
-    }
-
-    .navigation ul li a:hover {
-        background: #4D8740;
-        transition-duration: 0.7ms;
-        color: white;
-    }
-
-    .navigation a {
-        color: rgb(41, 39, 39);
-        text-decoration: none;
-    }
-
-    .correo{
-        list-style: none;
-    }
-</style>
-
 </html>
 
 {% endblock %}
