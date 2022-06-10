@@ -1,0 +1,154 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Proyecto de Aplicaciones Web" />
+    <meta name="author" content="Armando Velasquez, Daniela Gonzalez" />
+    <title>RECICLAJE</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Masthead-->
+    <header>
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-25">
+                    <div class="text-center text-black">
+                        <!-- Page heading-->
+                        <div class="container">
+                            <div class="row">
+                                <h1>&nbsp;</h1>
+                                <h1 class="mb-5">¿Por qué es importante reciclar?</h1>
+                                <p class="lead mb-2">La importancia del reciclaje de residuos crece día a día en una
+                                    sociedad cada vez más responsable con el cuidado del medioambiente. Reciclando, le
+                                    damos un nuevo uso a objetos destinados a convertirse en residuos y ayudamos a
+                                    nuestro planeta, así como también protegemos a las generaciones futuras.
+                                </p>
+                                <h1>&nbsp;</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-3">
+                    <div class="col-lg-6 text-white showcase-img"
+                        style="background-image: url('https://thumbs.dreamstime.com/b/vista-a%C3%A9rea-da-floresta-spruce-93501749.jpg')">
+                    </div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2 class="mb-5">Razones por las que es importante reciclar</h2>
+                        <p class="lead mb-0"><strong>Ahorramos materias primas</strong></p>
+                        <p class="lead mb-0">
+                            <i>Reciclando los envases reutilizamos estos materiales, ahorrando estos recursos naturales
+                                y ayudando a conservar la naturaleza. Así ayudamos a generar enormes beneficios en todos
+                                los ámbitos. En 2017, gracias al reciclaje, ahorramos 1,3 millones de toneladas de
+                                materias primas. ¿Increíble verdad?</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                        style="background-image: url('https://jomarsoftcorp.com/wp-content/uploads/2021/02/shutterstock_364247039-2-scaled-e1614174062941.jpg')">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <p class="lead mb-0"><strong>Ahorramos agua y energía</strong></p>
+                        <p class="lead mb-0">
+                            <i>En la extracción y transporte de las materias primas necesarias para crear nuevos
+                                productos se emplean grandes cantidades de agua y energía. Gracias al reciclaje, se
+                                produciría un ahorro de energía. Por ejemplo, fabricar una lata con materiales
+                                reciclados ahorra un 95% de energía frente a crear una nueva. ¡Tendríamos un menor
+                                consumo de energía en todos los sectores!</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                        style="background-image: url('https://boriscooper.org/wp-content/uploads/2022/01/2d341403-9def-4de6-9774-21aeaa30fd4d.jpg')">
+                    </div>
+                    <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+                        <p class="lead mb-0"><strong>Disminuye la contaminación</strong></p>
+                        <p class="lead mb-0">
+                            <i>Ya conocemos los efectos de los gases de efecto invernadero. Como comentamos
+                                anteriormente, al producir nuevos objetos a partir de materiales reciclados, evitamos la
+                                extracción de materias primas, lo que reduce las emisiones de gases contaminantes a la
+                                atmósfera y contribuye contra el cambio climático.</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                        style="background-image: url('https://www.op-online.de/bilder/2020/06/08/13790568/530131720-d83390b8-8094-44f4-85c0-d4f5877619651-3jea.jpg')">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <p class="lead mb-0"><strong>Genera empleo verde</strong></p>
+                        <p class="lead mb-0">
+                            <i>Otros de los motivos que explica por qué es importante reciclar es porque genera empleo.
+                                La actividad de Ecoembes genera en España 42.600 puestos de trabajo. Y es que para
+                                desarrollar la labor del reciclaje se necesitan ecodiseñadores, trabajadores para las
+                                plantas de selección y tratamiento, educadores, ingenieros, y expertos en gestión de
+                                residuos, etc.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+<style>
+    .navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .navigation ul li a:hover {
+        background: #4D8740;
+        transition-duration: 0.7ms;
+        color: white;
+    }
+
+    .navigation a {
+        color: rgb(41, 39, 39);
+        text-decoration: none;
+    }
+</style>
+
+</html>
+
+{% endblock %}
