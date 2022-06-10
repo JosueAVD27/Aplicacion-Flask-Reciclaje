@@ -27,31 +27,32 @@
                     <!--INGRESAMOS LAS VARIABLES QUE VAMOS A RECIBIR-->
                     <th scope="col">NOMBRE</th>
                     <th scope="col">CORREO ELECTRONICO</th>
-                    <th scope="col">TELEFONO</th>
-                    <th scope="col">MOTIVACIÓN</th>
+                    <th scope="col">SUGERENCIA</th>
                 </tr>
             </thead>
             <tbody>
                 <!--ACCEDEMOS A LA LISTA CON UN FOR-->
-                {% for Contacto in lista_contactos %}
+                {% for Sugerencia in lista_sugerencias %}
                 <tr>
                     <!--INERTA nombre y apellido-->
-                    <th>{{Contacto.ingreso_nombre + " " + Contacto.ingreso_apellido}}</th>
+                    <th>{{Sugerencia.ingreso_nombres}}</th>
                     <!--INSERTA EL CORREO ELECTRONICO-->
-                    <th>{{Contacto.ingreso_correo}}</th>
+                    <th>{{Sugerencia.ingreso_correo_S}}</th>
                     <!--INSERTA LA PRIORIDAD DE LA TAREA-->
-                    <th>{{Contacto.ingreso_telefono}}</th>
-                    <!--BOTON PARA ELIMINAR LA FILA-->
-                    <th>{{Contacto.ingreso_motivacion}}</th>
+                    <th>{{Sugerencia.sugerencias}}</th>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
         <!--BOTON BORRAR TODOS LOS CAMPOS DE LA TABLA-->
-        <form action="{{url_for('borrar')}}" method="post" class="card-body">
+        <form action="{{url_for('borrar2')}}" method="post" class="card-body">
             <button type="submit" class="btn boton_eliminar">BORRAR</button>
         </form>
     </section>
+
+
+
+
 
 
     <!-- Bootstrap core JS-->
@@ -83,5 +84,4 @@
     }
 </style>
 </html>
-
 {% endblock %}

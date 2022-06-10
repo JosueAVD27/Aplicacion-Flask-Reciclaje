@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 #Array donde almacenaremos los datos
 lista_contactos = []
+lista_sugerencias = []
 
 #Decorador para definir la ruta inicio
 @app.route('/')
@@ -24,7 +25,7 @@ def noticias():
 #Decorador para definir la ruta sugerencias
 @app.route('/sugerencias')
 def sugerencias():
-    return render_template('sugerencias.html')
+    return render_template('sugerencias.html', lista_sugerencias = lista_sugerencias)
 
 #Decorador para definir la ruta reciclaje
 @app.route('/reciclaje')
@@ -51,10 +52,15 @@ def responsabilidadsocial():
 def solucionesalmacenamiento():
     return render_template('solucionesalmacenamiento.html')
 
-#Decorador para definir la ruta Soluciones de almacenamiento
+#Decorador para definir la ruta de la lista de contactos
 @app.route('/listaContacto')
 def listaContacto():
     return render_template('listaContacto.html', lista_contactos = lista_contactos)
+
+#Decorador para definir la ruta de la lista de sugerencias
+@app.route('/listaSugerencias')
+def listaSugerencias():
+    return render_template('listaSugerencias.html', lista_sugerencias = lista_sugerencias)
 
 #Controlador de la ruta de envio de datos
 @app.route('/enviarContacto', methods=['POST']) 
@@ -77,7 +83,7 @@ def enviarContacto():
         ingreso_correo = request.form['ingreso_correo']              
         ingreso_telefono = request.form['ingreso_telefono'] 
         ingreso_motivacion = request.form['ingreso_motivacion']      
-        #Crea la condicion de que no guarde el registro cuando el campo de la tarea y el del correo estan vacios
+        #Crea la condicion de que no guarde el registro cuando los campos estan vacios
         if ingreso_nombre == '' or ingreso_apellido == '' or ingreso_correo == '' or ingreso_telefono == '' or ingreso_motivacion == '':            
             return redirect(url_for('contacto'))                       
         else:
@@ -101,7 +107,52 @@ def borrar():
         else:
             lista_contactos.clear()                           
             return redirect(url_for('listaContacto'))         
-        
+
+
+#Controlador de la ruta de envio de datos
+@app.route('/enviarSugerencia', methods=['POST']) 
+               
+def enviarSugerencia(): 
+    """ Funcion: enviarSugerencia() 
+            ingreso_nombres
+            ingreso_correo_S
+            sugerencias
+            -------------------------------------
+            Condicion para no admitir datos nulos
+
+            agrega datos a la lista
+        """                                                      
+    if request.method == 'POST':                                            
+        ingreso_nombres = request.form['ingreso_nombres']                     
+        ingreso_correo_S = request.form['ingreso_correo_S']                 
+        sugerencias = request.form['sugerencias']                   
+        #Crea la condicion de que no guarde el registro cuando los campos estan vacios
+        if ingreso_nombres == '' or ingreso_correo_S == '' or sugerencias == '':            
+            return redirect(url_for('sugerencias'))                       
+        else:
+            #Agrega a la lista los campos llenos
+            lista_sugerencias.append({'ingreso_nombres': ingreso_nombres, 'ingreso_correo_S': ingreso_correo_S, 'sugerencias': sugerencias})
+            return redirect(url_for('sugerencias'))
+
+#Controlador de la ruta para borrar los datos de la tabla
+@app.route('/borrar2', methods=['POST'])
+def borrar2():
+    ''' Funcion: borrar2()
+            Utiliza el metodo POST
+            -----------------------
+            valida la lita si se encuentra vacia y retorna si realizar cambios
+
+            elimina los datos de la lista
+    '''
+    if request.method == 'POST':                      
+        if lista_sugerencias == []:                         
+            return redirect(url_for('listaSugerencias'))               
+        else:
+            lista_sugerencias.clear()                           
+            return redirect(url_for('listaSugerencias'))
+
+
+
 
 #main del programa
 if __name__ == '__main__':
