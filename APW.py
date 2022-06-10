@@ -3,8 +3,6 @@ from flask import Flask, render_template
 #Intanciar la aplicacion
 app = Flask(__name__)
 
-
-
 #Decorador para definir la ruta inicio
 @app.route('/')
 def index():
@@ -20,11 +18,20 @@ def contacto():
 def noticias():
     return render_template('noticias.html')
 
-#Decorador para definir la ruta noticias
+#Decorador para definir la ruta sugerencias
 @app.route('/sugerencias')
 def sugerencias():
     return render_template('sugerencias.html')
 
+#Decorador para definir la ruta reciclaje
+@app.route('/reciclaje')
+def reciclaje():
+    return render_template('reciclaje.html')
+
+#Decorador para definir la ruta Proteccion del medioambiente
+@app.route('/proteccionmedio')
+def proteccionmedio():
+    return render_template('proteccionmedio.html')
 
 
 
