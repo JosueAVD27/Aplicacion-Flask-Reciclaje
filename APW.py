@@ -57,14 +57,26 @@ def listaContacto():
     return render_template('listaContacto.html', lista_contactos = lista_contactos)
 
 #Controlador de la ruta de envio de datos
-@app.route('/enviarContacto', methods=['POST'])                             
-def enviarContacto():                                                       #crea la funcion enviar
-    if request.method == 'POST':                                            #Condicion que solicita que el metodo sea igual a post
-        ingreso_nombre = request.form['ingreso_nombre']                     #Extrae los datos ingresados en el input de la descripcion de la tarea
-        ingreso_apellido = request.form['ingreso_apellido']                 #Extrae los datos ingresados en el input del correo electronico
-        ingreso_correo = request.form['ingreso_correo']                     #Extrae los datos ingresados en el input de la prioridad
-        ingreso_telefono = request.form['ingreso_telefono']                 #Extrae los datos ingresados en el input de la prioridad
-        ingreso_motivacion = request.form['ingreso_motivacion']             #Extrae los datos ingresados en el input de la prioridad
+@app.route('/enviarContacto', methods=['POST']) 
+               
+def enviarContacto(): 
+    """ Funcion: enviarContacto() 
+            ingreso_nombre
+            ingreso_apellido
+            ingreso_correo
+            ingreso_telefono
+            ingreso_motivacion
+            -------------------------------------
+            Condicion para no admitir datos nulos
+
+            agrega datos a la lista
+        """                                                      
+    if request.method == 'POST':                                            
+        ingreso_nombre = request.form['ingreso_nombre']                     
+        ingreso_apellido = request.form['ingreso_apellido']                 
+        ingreso_correo = request.form['ingreso_correo']              
+        ingreso_telefono = request.form['ingreso_telefono'] 
+        ingreso_motivacion = request.form['ingreso_motivacion']      
         #Crea la condicion de que no guarde el registro cuando el campo de la tarea y el del correo estan vacios
         if ingreso_nombre == '' or ingreso_apellido == '' or ingreso_correo == '' or ingreso_telefono == '' or ingreso_motivacion == '':            
             return redirect(url_for('contacto'))                       
@@ -72,6 +84,24 @@ def enviarContacto():                                                       #cre
             #Agrega a la lista los campos llenos
             lista_contactos.append({'ingreso_nombre': ingreso_nombre, 'ingreso_apellido': ingreso_apellido, 'ingreso_correo': ingreso_correo, 'ingreso_telefono': ingreso_telefono, 'ingreso_motivacion': ingreso_motivacion })
             return redirect(url_for('contacto'))
+
+#Controlador de la ruta para borrar los datos de la tabla
+@app.route('/borrar', methods=['POST'])
+def borrar():
+    ''' Funcion: borrar()
+            Utiliza el metodo POST
+            -----------------------
+            valida la lita si se encuentra vacia y retorna si realizar cambios
+
+            elimina los datos de la lista
+    '''
+    if request.method == 'POST':                      
+        if lista_contactos == []:                         
+            return redirect(url_for('listaContacto'))               
+        else:
+            lista_contactos.clear()                           
+            return redirect(url_for('listaContacto'))         
+        
 
 #main del programa
 if __name__ == '__main__':
