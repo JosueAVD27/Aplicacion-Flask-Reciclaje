@@ -33,7 +33,22 @@ def reciclaje():
 def proteccionmedio():
     return render_template('proteccionmedio.html')
 
+#Decorador para definir la ruta reutilizacion de recursos
+@app.route('/reutilizacionrecurso')
+def reutilizacionrecurso():
+    return render_template('reutilizacionrecurso.html')
 
+#Decorador para definir la ruta Responsabilidad social
+@app.route('/responsabilidadsocial')
+def responsabilidadsocial():
+    return render_template('responsabilidadsocial.html')
+
+#Decorador para definir la ruta Soluciones de almacenamiento
+@app.route('/solucionesalmacenamiento')
+def solucionesalmacenamiento():
+    return render_template('solucionesalmacenamiento.html')
+
+        
 
 #main del programa
 if __name__ == '__main__':

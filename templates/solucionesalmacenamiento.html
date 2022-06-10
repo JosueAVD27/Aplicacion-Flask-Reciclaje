@@ -1,0 +1,145 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Proyecto de Aplicaciones Web" />
+    <meta name="author" content="Armando Velasquez, Daniela Gonzalez" />
+    <title>RECICLAJE</title>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Masthead-->
+    <header>
+        <div class="row justify-content-center">
+            <div class="col-xl-25">
+                <div class="text-center text-black">
+                    <!-- Page heading-->
+                    <div class="container">
+                        <div class="row">
+                            <h1>&nbsp;</h1>
+                            <h1 class="mb-5">Soluciones de Almacenamiento de Residuos</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">Es importante hacer una revisión de nuestras acciones diarias para
+                                    pensar en cómo podemos reducir nuestro impacto en el clima y mejorar nuestra gestión
+                                    de los residuos en casa.
+                                </p>
+                                <p class="lead mb-2">La gestión de residuos es un conjunto de actividades recogidas en
+                                    la Ley 22/2011 de 28 de julio, de residuos y suelos contaminados, que contempla:</p>
+                                <i>Todas las operaciones de recogida, el transporte y tratamiento de los residuos,
+                                    incluida la vigilancia de estas operaciones, así como el mantenimiento posterior
+                                    al cierre de los vertederos, incluidas las actuaciones realizadas en calidad de
+                                    negociante o agente.</i>.
+                                </p>
+                            </div>
+                            <h1>&nbsp;</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg">
+                                <h4 class="mb-5">Reduce el desperdicio alimentario</h4>
+                                <p class="lead mb-2">Cuando tiramos comida a la basura estamos desperdiciando también la
+                                    energía y el agua empleadas para la producción, el transporte, el almacenamiento y
+                                    la gestión de residuos.</p>
+                            </div>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Separa y recicla</h4>
+                                <p class="lead mb-2">Separa los envases de plástico, el papel y cartón, el vidrio, la
+                                    materia orgánica y los restos, para depositarlos en el contenedor correcto
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h1>&nbsp;</h1>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Evita el uso de bolsas de plástico</h4>
+                                <p class="lead mb-2">Si llevas tu propia bolsa de tela o rafia a la compra, evitas que
+                                    te den una nueva cada vez.
+                                </p>
+                            </div>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Elabora compostaje doméstico</h4>
+                                <p class="lead mb-2">Utiliza tus residuos orgánicos para crear tu propio compost y
+                                    generar abono natural.
+                                </p>
+                            </div>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Reduce el uso de productos desechables</h4>
+                                <p class="lead mb-2">Utiliza productos que sean reutilizables o recargables para darles
+                                    más vidas.
+                                </p>
+                                <h1>&nbsp;</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <!-- Call to Action-->
+    <section class="call-to-action text-white text-center" id="signup"
+        style="background-image: url('https://www.jll.es/images/global/treant-and-insights/es-cities-noah-buscher.jpg')">
+        <div class="container position-relative">
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+<style>
+    /*ESTILO DEL NAVBAR BOTONES MENÚ*/
+    .navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .navigation ul li a:hover {
+        background: #4D8740;
+        transition-duration: 0.7ms;
+        color: white;
+    }
+
+    .navigation a {
+        color: rgb(41, 39, 39);
+        text-decoration: none;
+    }
+</style>
+
+</html>
+{% endblock %}

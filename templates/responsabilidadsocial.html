@@ -1,0 +1,197 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Proyecto de Aplicaciones Web" />
+    <meta name="author" content="Armando Velasquez, Daniela Gonzalez" />
+    <title>RECICLAJE</title>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Masthead-->
+    <header>
+        <div class="row justify-content-center">
+            <div class="col-xl-25">
+                <div class="text-center text-black">
+                    <!-- Page heading-->
+                    <div class="container">
+                        <div class="row">
+                            <h1>&nbsp;</h1>
+                            <h1 class="mb-5">Responsabilidad Social Corporativa</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">La Responsabilidad Social Corporativa (RSC) es una forma de dirigir
+                                    las empresas basado en la gestión de los impactos que su actividad genera sobre sus
+                                    clientes, empleados, accionistas, comunidades locales, medioambiente y sobre la
+                                    sociedad en general.
+                                </p>
+                            </div>
+                            <h1>&nbsp;</h1>
+                            <h2 class="mb-5">Cumplimiento de la legislación</h2>
+                            <p class="lead mb-2">La RSC implica el cumplimiento obligatorio de la legislación
+                                nacional vigente y especialmente de las normas internacionales en vigor (OIT,
+                                Declaración Universal de los Derechos Humanos, Normas de Naciones Unidas sobre
+                                Responsabilidades de las Empresas Transnacionales y otras Empresas Comerciales en la
+                                esfera de los Derechos Humanos, Líneas Directrices de la OCDE para Empresas
+                                Multinacionales).
+                            </p>
+                            <p class="lead mb-2">No lo hemos hecho tan bien con las primeras dos "R": reducción y
+                                reutilización. Pero no siempre son tan fáciles como el reciclaje. El reciclaje es
+                                mejor que fabricar elementos con materiales recién extraídos. Sin embargo, todavía
+                                se necesitan algunos recursos para convertir objetos reciclados en nuevos, en cambio
+                                no se necesita ningún recurso para reutilizar los objetos o simplemente no
+                                comprarlos.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg">
+                                <h4 class="mb-5">Global y transversal</h4>
+                                <p class="lead mb-2">La RSC es de carácter global, es decir afecta a todas las áreas de
+                                    negocio de la empresa y de sus participadas, así como a todas las áreas geográficas
+                                    en donde desarrollen su actividad. Afecta por tanto, a toda la cadena de valor
+                                    necesaria para el desarrollo de la actividad, prestación del servicio o producción
+                                    del bien.</p>
+                            </div>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Ética y coherencia</h4>
+                                <p class="lead mb-2">La RSC comporta compromisos éticos objetivos que se convierten
+                                    de esta manera en obligación para quien los contrae. Debe existir coherencia
+                                    entre los compromisos públicos adquiridos con las estrategias y decisiones de
+                                    negocio, pues en otro caso se convertirá en una mera gestión de la reputación.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h1>&nbsp;</h1>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Gestión de impactos</h4>
+                                <p class="lead mb-2">La RSC se manifiesta en los impactos que genera la actividad
+                                    empresarial en el ámbito social, medioambiental y económico. Para su gestión es
+                                    imprescindible identificar, prevenir y atenuar las posibles consecuencias adversas
+                                    que se pudieran producir.
+                                </p>
+                            </div>
+                            <div class="col-lg">
+                                <h4 class="mb-5">Satisfacción de expectativas y necesidades</h4>
+                                <p class="lead mb-2">La RSC se orienta a la satisfacción e información de las
+                                    expectativas y necesidades de los grupos de interés. Deben generarse procesos que
+                                    integren las preocupaciones sociales, medioambientales y éticas de los mismos en las
+                                    operaciones empresariales y en la estrategia, de manera que se genere valor no solo
+                                    para los accionistas sino para todos los grupos de interés y la sociedad.
+                                </p>
+                            </div>
+                            <h4 class="mb-5">¿Por qué es importante?</h4>
+                            <p class="lead mb-2">A principios de la década de 1990, la globalización prometía un futuro
+                                lleno de buenos augurios. Se suponía que todos saldrían ganando, tanto los países
+                                desarrollados como los países en vías de desarrollo. Parecía que la globalización
+                                produciría un desarrollo sin precedentes a escala mundial pero todas esas expectativas
+                                se han ido diluyendo al producirse grandes desequilibrios tanto entre los países como
+                                dentro de ellos.</p>
+                            <h1>&nbsp;</h1>
+                            <h4 class="mb-5">La globalización ha favorecido:</h4>
+                            <p class="lead mb-2" align="left">El aumento del poder de la empresa en detrimento de los
+                                Estados.</p>
+                            <p class="lead mb-2" align="left">La disminución en derechos para atraer la inversión
+                                directa extranjera.
+                            </p>
+                            <p class="lead mb-2" align="left">Los procesos de deslocalización.</p>
+                            <p class="lead mb-2" align="left">La privatización de servicios básicos.</p>
+                            <h1>&nbsp;</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">Todo este contexto expuesto, ha favorecido el auge del debate sobre
+                                    la Responsabilidad Social Corporativa (RSC), como herramienta que sirva para
+                                    aminorar el impacto negativo de las empresas en general y de las multinacionales en
+                                    particular, sobre los derechos sociales, laborales, el medioambiente y en
+                                    definitiva, sobre los Derechos Humanos.</p>
+                            </div>
+                            <h4 class="mb-5">Ámbitos de la RSC</h4>
+                            <p class="lead mb-2">La RSC es un concepto transversal que afecta a distintos ámbitos de
+                                gestión de la empresa, por lo que las actividades desarrolladas en el marco de la RSC
+                                han de estar:
+                            </p>
+                            <p class="lead mb-2"><i>Vinculadas a la actividad básica de la empresa.</i></p>
+                            <p class="lead mb-2"><i>Tener una vocación de permanencia.</i></p>
+                            <p class="lead mb-2"><i>Implicar un compromiso de la alta dirección.</i></p>
+                            <p class="lead mb-2">Existe un acuerdo sobre las grandes áreas temáticas que abarca la RSC:
+                                la económica, la social y la medioambiental. Sin embargo si algo caracteriza a la RSC es
+                                su carácter pluridimensional que afecta a distintos ámbitos de la gestión de la empresa:
+                            </p>
+                            <p class="lead mb-2"><i>Derechos humanos</i></p>
+                            <p class="lead mb-2"><i>Prácticas de trabajo y empleo</i></p>
+                            <p class="lead mb-2"><i>Protección de la salud</i></p>
+                            <p class="lead mb-2"><i>Cuestiones medioambientales</i></p>
+                            <p class="lead mb-2"><i>Lucha contra el fraude y la corrupción</i></p>
+                            <p class="lead mb-2"><i>Intereses de los consumidores</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <!-- Call to Action-->
+    <section class="call-to-action text-white text-center" id="signup"
+        style="background-image: url('https://www.jll.es/images/global/treant-and-insights/es-cities-noah-buscher.jpg')">
+        <div class="container position-relative">
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+<style>
+    /*ESTILO DEL NAVBAR BOTONES MENÚ*/
+    .navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .navigation ul li a:hover {
+        background: #4D8740;
+        transition-duration: 0.7ms;
+        color: white;
+    }
+
+    .navigation a {
+        color: rgb(41, 39, 39);
+        text-decoration: none;
+    }
+</style>
+
+</html>
+
+{% endblock %}

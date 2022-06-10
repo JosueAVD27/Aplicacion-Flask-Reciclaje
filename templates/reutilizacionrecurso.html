@@ -1,0 +1,188 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Proyecto de Aplicaciones Web" />
+    <meta name="author" content="Armando Velasquez, Daniela Gonzalez" />
+    <title>RECICLAJE</title>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Masthead-->
+    <header>
+        <div class="row justify-content-center">
+            <div class="col-xl-25">
+                <div class="text-center text-black">
+                    <!-- Page heading-->
+                    <div class="container">
+                        <div class="row">
+                            <h1>&nbsp;</h1>
+                            <h1 class="mb-5">La conservación de los recursos naturales</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">¿Cómo podemos proteger los recursos naturales de la Tierra? Una
+                                    respuesta es la conservación . Esto significa ahorrar recursos. Tenemos que ahorrar
+                                    recursos para que queden algunos para el futuro. También tenemos que proteger los
+                                    recursos de la contaminación y el uso excesivo.
+                                </p>
+                                <p class="lead mb-2">Cuando conservamos recursos, también reducimos la basura que
+                                    producimos. Los estadounidenses botan 340 millones de toneladas de basura cada año.
+                                    ¡Tiramos 2,5 millones de botellas de plástico cada hora! La mayor parte de lo que
+                                    tiramos acaba en vertederos, todas esas botellas de plástico tardan cientos de años
+                                    en descomponerse. ¿Cuáles son los problemas causados por la producción de tanta
+                                    basura? Los recursos naturales deben ser utilizados para producir materiales. Se
+                                    debe ceder tierra para verter materiales. Si los materiales son tóxicos, pueden
+                                    causar contaminación.</p>
+                            </div>
+                            <h1>&nbsp;</h1>
+                            <h2 class="mb-5">Las tres "R"</h2>
+                            <div class="col-lg">
+                                <p class="lead mb-2">Probablemente ya conoces las tres "R". Significan reducir,
+                                    reutilizar y reciclar. La tercera R, la de reciclar, es muy popular. Eso es porque
+                                    es fácil. Hay miles de lugares para reciclar objetos como latas de aluminio. Muchas
+                                    ciudades estadounidenses permiten poner los elementos que se desean reciclar en un
+                                    lugar especial junto a la acera.
+                                </p>
+                                <p class="lead mb-2">No lo hemos hecho tan bien con las primeras dos "R": reducción y
+                                    reutilización. Pero no siempre son tan fáciles como el reciclaje. El reciclaje es
+                                    mejor que fabricar elementos con materiales recién extraídos. Sin embargo, todavía
+                                    se necesitan algunos recursos para convertir objetos reciclados en nuevos, en cambio
+                                    no se necesita ningún recurso para reutilizar los objetos o simplemente no
+                                    comprarlos.</p>
+                            </div>
+                            <p class="lead mb-2">
+                            <h4 class="mb-5">Reducir</h4>
+                            <p class="lead mb-2">Reducir el uso de recursos significa exactamente lo que dice, utilizar
+                                menos recursos. Existen muchas maneras de reducir nuestro uso de recursos.</p>
+                            <h1>&nbsp;</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">Compra bienes duraderos. Elije los elementos que están bien hechos
+                                    para
+                                    que duren más
+                                    tiempo. Así comprarás menos artículos a largo plazo, por lo que ahorrarás tanto
+                                    dinero como recursos. ¡Así ganamos todos!</p>
+                            </div>
+                            <div class="col-lg">
+                                <p class="lead mb-2">
+                                    Repara en lugar de reemplazar. Arregla tu bicicleta en lugar de comprar una nueva.
+                                    Cose un botón en lugar de comprar una camisa nueva. Vamos a usar menos recursos y
+                                    ahorraremos dinero.</p>
+                            </div>
+                            <div class="col-lg">
+                                <p class="lead mb-2">Compra sólo lo que necesitas. No compres un litro de leche si sólo
+                                    puedes beber la
+                                    mitad antes de su fecha de vencimiento. En lugar de eso, compra cajas individuales y
+                                    bébelas todas. No estarás malgastando recursos (¡ni dinero!)</p>
+                            </div>
+                            <h4 class="mb-5">Reutilización</h4>
+                            <p class="lead mb-2">La reutilización de los recursos significa usar nuevamente los
+                                elementos en lugar de tirarlos a la basura. Un elemento reutilizado puede ser utilizado
+                                de la misma manera por alguien más. O se puede utilizar de una manera nueva. Por
+                                ejemplo, Shana tiene unos jeans que le quedan pequeños. Podría dárselos a su hermana más
+                                joven o podría utilizarlos para hacer algo diferente para ella, digamos, un bolso de
+                                mezclilla</p>
+                            <h1>&nbsp;</h1>
+                            <h4 class="mb-5">Reciclar</h4>
+                            <p class="lead mb-2">Se puede reciclar muchos elementos. Los materiales de ellos se pueden
+                                reutilizar en nuevos productos. Por ejemplo, las botellas de agua de plástico se pueden
+                                reciclar. ¡El material reciclado se puede convertir en poleras! Las guías telefónicas
+                                viejas también pueden ser recicladas y convertidas en libros. Cuando vayas a comprar
+                                nuevos productos, busca los que están hechos de materiales reciclados.</p>
+                            <h1>&nbsp;</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">En la mayoría de los centros de reciclaje, puedes dejar latas de
+                                    metal, cartón y productos de papel, envases de vidrio y botellas de plástico. Son
+                                    comunes las estaciones de reciclaje</p>
+                            </div>
+                            <div class="col-lg">
+                                <p class="lead mb-2">
+                                    Los lugares de reciclaje ubicados en la acera por lo general aceptan estos artículos
+                                    también. ¿Sabes cómo reciclar en tu comunidad? Ponte en contacto con tu autoridad
+                                    local de desechos sólidos para averiguarlo. Si no has empezado a reciclar, empieza
+                                    hoy. ¡Es una gran manera de ayudar al planeta!</p>
+                            </div>
+                            <h1>&nbsp;</h1>
+                            <p class="lead mb-2" align="left">La conservación es una forma muy efectiva para ayudarnos a tener
+                                materiales útiles en el futuro.</p>
+                            <p class="lead mb-2" align="left">Para conservar, sigue las tres R: reducir, reutilizar, reciclar.
+                            </p>
+                            <p class="lead mb-2" align="left"> Reducir los medios para utilizar menos.</p>
+                            <p class="lead mb-2" align="left">Reutilizar significa volver a usar algo, dárselo a alguien que lo
+                                haga, o cambiarlo para que pueda ser utilizado de otra manera.</p>
+                            <p class="lead mb-2" align="left">Reciclar significa reciclar elementos en tu comunidad. Esto es
+                                genial aunque requiera energía.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <!-- Call to Action-->
+    <section class="call-to-action text-white text-center" id="signup"
+        style="background-image: url('https://www.jll.es/images/global/treant-and-insights/es-cities-noah-buscher.jpg')">
+        <div class="container position-relative">
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+<style>
+    /*ESTILO DEL NAVBAR BOTONES MENÚ*/
+    .navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .navigation ul li a:hover {
+        background: #4D8740;
+        transition-duration: 0.7ms;
+        color: white;
+    }
+
+    .navigation a {
+        color: rgb(41, 39, 39);
+        text-decoration: none;
+    }
+</style>
+
+</html>
+
+{% endblock %}
