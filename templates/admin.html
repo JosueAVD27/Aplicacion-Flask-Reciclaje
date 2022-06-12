@@ -27,6 +27,41 @@
                     <!--INGRESAMOS LAS VARIABLES QUE VAMOS A RECIBIR-->
                     <th scope="col">NOMBRE</th>
                     <th scope="col">CORREO ELECTRONICO</th>
+                    <th scope="col">TELEFONO</th>
+                    <th scope="col">MOTIVACIÓN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--ACCEDEMOS A LA LISTA CON UN FOR-->
+                {% for Contacto in lista_contactos %}
+                <tr>
+                    <!--INERTA nombre y apellido-->
+                    <th>{{Contacto.ingreso_nombre + " " + Contacto.ingreso_apellido}}</th>
+                    <!--INSERTA EL CORREO ELECTRONICO-->
+                    <th>{{Contacto.ingreso_correo}}</th>
+                    <!--INSERTA LA PRIORIDAD DE LA TAREA-->
+                    <th>{{Contacto.ingreso_telefono}}</th>
+                    <!--BOTON PARA ELIMINAR LA FILA-->
+                    <th>{{Contacto.ingreso_motivacion}}</th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!--BOTON BORRAR TODOS LOS CAMPOS DE LA TABLA-->
+        <form action="{{url_for('borrar')}}" method="post" class="card-body">
+            <button type="submit" class="btn boton_eliminar">BORRAR</button>
+        </form>
+    </section>
+
+    <section class="lista_datos">
+        <h1>LISTA DE SUGERENCIAS</h1>
+        <!--CONTROLADOR 1 - TABLA DE DATOS-->
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <!--INGRESAMOS LAS VARIABLES QUE VAMOS A RECIBIR-->
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">CORREO ELECTRONICO</th>
                     <th scope="col">SUGERENCIA</th>
                 </tr>
             </thead>
@@ -50,11 +85,6 @@
         </form>
     </section>
 
-
-
-
-
-
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -65,23 +95,6 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
-<style>
-    /*Lista de datos*/
-    .lista_datos{
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 70px;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .boton_eliminar{
-        border: solid 1px rgb(255, 0, 0);
-        padding: 15px 50px;
-        font-weight: bold;
-        color: rgb(255, 0, 0);
-        margin-bottom: 30px;
-    }
-</style>
 </html>
+
 {% endblock %}

@@ -1,5 +1,7 @@
 #Importamos las librerias
 from flask import Flask, redirect, render_template, request, url_for
+#from django.shortcuts import render
+#from django.contrib.auth.forms import UserChangeForm
 #Intanciar la aplicacion
 app = Flask(__name__)
 
@@ -53,14 +55,15 @@ def solucionesalmacenamiento():
     return render_template('solucionesalmacenamiento.html')
 
 #Decorador para definir la ruta de la lista de contactos
-@app.route('/listaContacto')
-def listaContacto():
-    return render_template('listaContacto.html', lista_contactos = lista_contactos)
+@app.route('/admin')
+def admin():
+    return render_template('admin.html', lista_contactos = lista_contactos, lista_sugerencias = lista_sugerencias)
 
-#Decorador para definir la ruta de la lista de sugerencias
-@app.route('/listaSugerencias')
-def listaSugerencias():
-    return render_template('listaSugerencias.html', lista_sugerencias = lista_sugerencias)
+#Decorador para definir la ruta Soluciones de almacenamiento
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 
 #Controlador de la ruta de envio de datos
 @app.route('/enviarContacto', methods=['POST']) 
@@ -89,7 +92,9 @@ def enviarContacto():
         else:
             #Agrega a la lista los campos llenos
             lista_contactos.append({'ingreso_nombre': ingreso_nombre, 'ingreso_apellido': ingreso_apellido, 'ingreso_correo': ingreso_correo, 'ingreso_telefono': ingreso_telefono, 'ingreso_motivacion': ingreso_motivacion })
+            #messagebox.showinfo('Titulo', 'Informacion')
             return redirect(url_for('contacto'))
+
 
 #Controlador de la ruta para borrar los datos de la tabla
 @app.route('/borrar', methods=['POST'])
@@ -103,10 +108,10 @@ def borrar():
     '''
     if request.method == 'POST':                      
         if lista_contactos == []:                         
-            return redirect(url_for('listaContacto'))               
+            return redirect(url_for('admin'))               
         else:
             lista_contactos.clear()                           
-            return redirect(url_for('listaContacto'))         
+            return redirect(url_for('admin'))         
 
 
 #Controlador de la ruta de envio de datos
@@ -146,10 +151,13 @@ def borrar2():
     '''
     if request.method == 'POST':                      
         if lista_sugerencias == []:                         
-            return redirect(url_for('listaSugerencias'))               
+            return redirect(url_for('admin'))               
         else:
             lista_sugerencias.clear()                           
-            return redirect(url_for('listaSugerencias'))
+            return redirect(url_for('admin'))
+
+
+
 
 
 
