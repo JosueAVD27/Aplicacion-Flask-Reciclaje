@@ -64,6 +64,20 @@ def admin():
 def login():
     return render_template('login.html')
 
+#Controlador de la ruta para borrar los datos de la tabla
+@app.route('/ingresar', methods=['POST'])
+def ingresar():
+    usuario = 'admin@gmail.com'
+    contrasenia = 'admin'
+    if request.method == 'POST':
+        login_correo = request.form['login_correo'] 
+        login_contrasenia = request.form['login_contrasenia']  
+        if login_correo == usuario and login_contrasenia == contrasenia:
+            return redirect(url_for('admin'))
+        else:
+            return redirect(url_for('login'))
+
+
 
 #Controlador de la ruta de envio de datos
 @app.route('/enviarContacto', methods=['POST']) 
@@ -155,12 +169,6 @@ def borrar2():
         else:
             lista_sugerencias.clear()                           
             return redirect(url_for('admin'))
-
-
-
-
-
-
 
 #main del programa
 if __name__ == '__main__':
