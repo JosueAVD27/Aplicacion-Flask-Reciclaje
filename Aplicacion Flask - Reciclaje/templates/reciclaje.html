@@ -1,0 +1,165 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Proyecto de Aplicaciones Web" />
+    <meta name="author" content="Armando Velasquez, Daniela Gonzalez" />
+    <title>RECICLAJE</title>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- Masthead-->
+    <header>
+        <div class="row justify-content-center">
+            <div class="col-xl-25">
+                <div class="text-center text-black">
+                    <!-- Page heading-->
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="mb-5">Reciclaje y reutilización de plásticos</h1>
+                            <div class="col-lg">
+                                <p class="lead mb-2">El reciclaje es el tercer componente clave de la conocida regla de
+                                    las tres “R”: reducir, reutilizar y reciclar. La primera R consiste en la mejor
+                                    manera de reducir los residuos generales. Si nunca lo compras, lo usas o lo tienes,
+                                    entonces no tendrás ningún residuo para administrar cuando termines. Esto se logra
+                                    al comprar productos duraderos, planificando las compras y reduciendo productos que
+                                    no son necesarios y hacen mal al medioambiente.
+                                </p>
+                            </div>
+                            <div class="col-lg">
+                                <p class="lead mb-2">La reutilización se trata de encontrar usos secundarios para los
+                                    artículos que ya perdieron su propósito original, en lugar de desecharlos a la
+                                    basura. Para esto, es importante mantener y reparar los objetos que tengas en buen
+                                    estado; también puedes donarlos, regalarlos o convertirlos es nuevas e increíbles
+                                    piezas.</p>
+                            </div>
+                            <h2 class="mb-5">Reciclaje de plásticos</h2>
+                            <div class="col-lg">
+                                <p class="lead mb-2">El reciclaje de plástico se refiere al proceso de recuperación de
+                                    desechos o desperdicios de plástico y al procesamiento de materiales en productos
+                                    funcionales y útiles. El objetivo de esta actividad es reducir las altas tasas de
+                                    contaminación plástica y, al mismo tiempo, poner menos presión sobre los materiales
+                                    vírgenes para producir nuevos productos plásticos. Además, ayuda a conservar los
+                                    recursos y desvía los plásticos de los vertederos o destinos no deseados, como los
+                                    océanos.
+                                </p>
+                            </div>
+                            <h1>&nbsp;</h1>
+                            <h2 class="mb-5">¿Por qué es importante reciclar plástico?</h2>
+                            <div class="col-lg">
+                                <p class="lead mb-2">La necesidad de reciclar plástico reside en que este material es
+                                    duradero, ligero y económico, y puede moldearse fácilmente en varios productos que
+                                    se utilizan en una gran cantidad de áreas productivas. Cada año, más de 100 millones
+                                    de toneladas de plásticos se fabrican en todo el mundo y alrededor de 200 millones
+                                    de ellas se trasforma; se hace espuma, se lamina y se convierte en millones de
+                                    paquetes y envases principalemente. Esta es la razón de la importancia principal del
+                                    reciclaje de este material.
+                                </p>
+                            </div>
+                            <h1>&nbsp;</h1>
+                            <h2 class="mb-5">¿Cuáles son los plásticos más reciclados?</h2>
+                            <h4>Existen numerosos tipos de plásticos que se pueden reciclar para crear nuevos y mejores
+                                productos. Estos son algunos de ellos.</h4>
+                            <h1>&nbsp;</h1>
+                            <div class="col-lg-4">
+                                <p class="lead mb-2"><strong>Tereftalato de polietileno</strong>
+                                    Este tipo de plástico, también conocido como PET por sus siglas en inglés, es
+                                    resistente, tiene una claridad excelente, es bastante fuerte y es permeable contra
+                                    la humedad y el gas. Es utilizado en la fabricación de botellas y frascos de agua,
+                                    refrescos e incluso lo puedes encontrar en muchos textiles.
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="lead mb-2"><strong>Polietileno de alta densidad</strong>
+                                    Este plástico es conocido por su rigidez, resistencia a la humedad, resistencia a
+                                    factores externos, versatilidad y menos permeabilidad al gas. Se utiliza en la
+                                    fabricación de botellas de agua, de zumo y de leche. También se usa para hacer
+                                    bolsas resistentes de basura para hogares y empresas.
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="lead mb-2"><strong>Cloruro de polivinilo</strong>
+                                    Este tipo de plástico, también conocido como PET por sus siglas en inglés, es
+                                    resistente, tiene una claridad excelente, es bastante fuerte y es permeable contra
+                                    la
+                                    humedad y el gas. Es utilizado en la fabricación de botellas y frascos de agua,
+                                    refrescos e incluso lo puedes encontrar en muchos textiles.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <h1>&nbsp;</h1>
+                                <h1 class="mb-5">¿En qué pueden convertirse los plásticos que reciclamos?</h1>
+                                <div class="col-lg">
+                                    <p class="lead mb-2">Una botella de plástico que contenga zumo, agua o refrescos
+                                        puede convertirse en millones de cosas que facilitan la vida del hombre y, a
+                                        su vez, beneficia al medio ambiente. Los recipientes utilizados para la
+                                        leche, el champú, el detergente para la ropa y los productos de limpieza,
+                                        cuando se reciclan pueden convertirse en botellas y recipientes nuevos,
+                                        madera plástica, mesas de picnic, muebles de jardín, juegos infantiles,
+                                        contenedores de reciclaje, entre otros.
+                                    </p>
+                                </div>
+                                <div class="col-lg">
+                                    <p class="lead mb-2">Las bolsas de plástico para llevar comestibles a casa de
+                                        seguro mantienen el pan y otros alimentos frescos. Pero, cuando se reciclan,
+                                        se pueden convertir en madera de construcción plástica que se utiliza para
+                                        hacer bancos de parque, terrazas y cercas en el patio trasero de una casa o
+                                        jardín de infancia. También se pueden reciclar en bolsas de plástico nuevas
+                                        para luego volver a usarlas.
+                                    </p>
+                                </div>
+                                <div class="col-lg">
+                                    <p class="lead mb-2">Las botellas de plástico para refrescos, zumos y agua se
+                                        pueden convertir en muchas cosas, tales como: camisetas, suéteres,
+                                        chaquetas, aislamiento para chaquetas y sacos de dormir, alfombras y más
+                                        botellas. Se necesitan 10 botellas aproximadamente para producir suficiente
+                                        fibra y hacer una camiseta nueva y fresca. Se necesitan 63 unidades para
+                                        hacer un suéter y solo 14 botellas para crear suficiente aislamiento para
+                                        una chaqueta de esquí.
+                                    </p>
+                                </div>
+                                <h1>&nbsp;</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <!-- Call to Action-->
+    <section class="call-to-action text-white text-center" id="signup"
+        style="background-image: url('https://www.jll.es/images/global/treant-and-insights/es-cities-noah-buscher.jpg')">
+        <div class="container position-relative">
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+        </div>
+    </section>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
+
+{% endblock %}
